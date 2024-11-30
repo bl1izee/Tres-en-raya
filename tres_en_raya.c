@@ -77,7 +77,7 @@ int main(){
 	}
 	
 	imprimirTablero();
-	printf("\n[+] El juego ha terminado. Se ha completado el tres en raya!");
+	printf("\n[+] El juego ha terminado. Ha ganado el jugador %i!", jugador);
 	
 	return 0; // El código se ejecutó bien
 }
