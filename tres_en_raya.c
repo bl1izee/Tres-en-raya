@@ -1,12 +1,13 @@
 /*
 *****************************************************************************
-*							Créditos: Pablo Martín							*
+*				Créditos: Pablo Martín			    *
 *****************************************************************************
-*									Enunciado								*
+*				     Enunciado			   	    *
 *****************************************************************************
-Juego de tres en raya
+Juego de tres en raya/tic-tac-toe
 */
 
+/* Incluimos las bibliotecas */
 #include <stdio.h>
 
 /* Declaramos las funciones */
@@ -48,17 +49,19 @@ int main(){
 			
 			printf("\n[?] Fila: ");
 			scanFila = scanf("%i", &filaAdd);
+			while(getchar() != '\n');
 			
-			printf("\n[?] Columna: ");
+			printf("[?] Columna: ");
 			scanColumna = scanf("%i", &columnaAdd);
+			while(getchar() != '\n');
 			
 			if(((scanColumna + scanFila) != 2) || (columnaAdd >= 4) || (filaAdd >= 4) || (columnaAdd <= 0) || (filaAdd <= 0)){
-				printf("\n[-] Error al ingresar los datos. Intentelo de nuevo.");
+				printf("\n[-] Error al ingresar los datos. Intentelo de nuevo.\n");
 			} else{
 				ficha = testFicha(filaAdd, columnaAdd, jugador);
 				
 				if(ficha == 1){
-					printf("\n[-] Error, ya tiene una ficha ahí.");
+					printf("\n[-] Error, ya hay ficha ahi.\n");
 				} else{
 					if(contenidoTablero >= 6){
 						deletFichaInput(filaDell, columnaDell, jugador);
@@ -74,7 +77,7 @@ int main(){
 	}
 	
 	imprimirTablero();
-	printf("\n[+] El juego ha terminado");
+	printf("\n[+] El juego ha terminado. Se ha completado el tres en raya!");
 	
 	return 0; // El código se ejecutó bien
 }
@@ -133,9 +136,11 @@ void deletFichaInput(int filaDell, int columnaDell, int turno){
 		
 		printf("\n[?] Fila: ");
 		scanFila = scanf("%i", &filaDell);
+		while(getchar() != '\n');
 		
 		printf("\n[?] Columna: ");
 		scanColumna = scanf("%i", &columnaDell);
+		while(getchar() != '\n');
 		
 		if((scanColumna + scanFila) != 2){
 			printf("\n[-] Error al ingresar los datos. Intentelo de nuevo.");
