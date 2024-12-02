@@ -191,14 +191,14 @@ int combinaciones(int turno){
 	}
 	
 	/* Combinacions para ganar */
-	int condicion1 = (tablero[1][1] == ficha) && (tablero[2][1] == ficha) && (tablero[3][1] == ficha);
-	int condicion2 = (tablero[2][1] == ficha) && (tablero[2][2] == ficha) && (tablero[2][3] == ficha);
-	int condicion3 = (tablero[3][1] == ficha) && (tablero[3][2] == ficha) && (tablero[3][3] == ficha);
-	int condicion4 = (tablero[1][1] == ficha) && (tablero[2][2] == ficha) && (tablero[3][3] == ficha);
-	int condicion5 = (tablero[1][3] == ficha) && (tablero[2][2] == ficha) && (tablero[3][1] == ficha);
-	int condicion6 = (tablero[1][1] == ficha) && (tablero[1][2] == ficha) && (tablero[1][3] == ficha);
-	int condicion7 = (tablero[2][1] == ficha) && (tablero[2][2] == ficha) && (tablero[2][3] == ficha);
-	int condicion8 = (tablero[3][1] == ficha) && (tablero[3][2] == ficha) && (tablero[3][3] == ficha);
+	int condicion1 = (tablero[1][1] == ficha) && (tablero[1][2] == ficha) && (tablero[1][3] == ficha);
+	int condicion2 = (tablero[2][1] == ficha) && (tablero[2][2] == ficha) && (tablero[3][3] == ficha);
+	int condicion3 = (tablero[3][1] == ficha) && (tablero[2][2] == ficha) && (tablero[3][3] == ficha);
+	int condicion4 = (tablero[1][1] == ficha) && (tablero[2][1] == ficha) && (tablero[3][1] == ficha);
+	int condicion5 = (tablero[1][2] == ficha) && (tablero[2][2] == ficha) && (tablero[3][2] == ficha);
+	int condicion6 = (tablero[1][3] == ficha) && (tablero[2][3] == ficha) && (tablero[3][3] == ficha);
+	int condicion7 = (tablero[1][1] == ficha) && (tablero[2][2] == ficha) && (tablero[3][3] == ficha);
+	int condicion8 = (tablero[1][3] == ficha) && (tablero[3][2] == ficha) && (tablero[3][1] == ficha);
 	
 	if((condicion1 == 1) || (condicion2 == 1) || (condicion3 == 1) || (condicion4 == 1) || (condicion5 == 1) || (condicion6 == 1) || (condicion7 == 1) || (condicion8 == 1)){
 		salida = 1;
